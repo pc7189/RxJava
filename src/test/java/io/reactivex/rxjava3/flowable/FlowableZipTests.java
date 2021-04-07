@@ -100,10 +100,7 @@ public class FlowableZipTests extends RxJavaTest {
             @Override
             public Object apply(Object[] args) {
 
-//                TODO : replace the array in the System.out.println with something that doesn't give out address values
-//                FIXME : Replace the array in the System.out.println with Arrays.toString(args)
-
-                System.out.println("received: " + args);
+                System.out.println("received: " + Arrays.toString(args));
                 assertEquals("No argument should have been passed", 0, args.length);
                 return invoked;
             }
