@@ -103,14 +103,6 @@ public abstract class QueueDrainObserver<T, U, V> extends QueueDrainSubscriberPa
         QueueDrainHelper.drainLoop(q, observer, delayError, disposable, this);
     }
 
-    @Override
-    public final Throwable error() {
-
-        //    TODO : remove the overridden method as it returns the default value anyway
-        //    FIXME : Remove the piece of code
-
-        return error;
-    }
 
     @Override
     public final int leave(int m) {
