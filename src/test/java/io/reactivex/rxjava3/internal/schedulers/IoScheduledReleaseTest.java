@@ -26,6 +26,10 @@ public class IoScheduledReleaseTest extends RxJavaTest {
     /* This test will be stuck in a deadlock if IoScheduler.USE_SCHEDULED_RELEASE is not set */
     @Test
     public void scheduledRelease() {
+
+        //    TODO : Change the static field to dynamic
+        //    FIXME : Remove the keyword 'static'
+
         boolean savedScheduledRelease = IoScheduler.USE_SCHEDULED_RELEASE;
         IoScheduler.USE_SCHEDULED_RELEASE = true;
         try {
