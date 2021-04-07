@@ -463,13 +463,13 @@ public final class BehaviorProcessor<T> extends FlowableProcessor<T> {
     void setCurrent(Object o) {
         Lock wl = writeLock;
         wl.lock();
-
-        //    TODO : Surround code after acquiring lock with try finally block to release the lock properly
-        //    FIXME : Use the try and finally blocks to surround the code
-
-        index++;
-        value.lazySet(o);
-        wl.unlock();
+        try {
+            index++;
+            value.lazySet(o);
+        }
+        finally {
+            wl.unlock();
+        }
     }
 
     static final class BehaviorSubscription<@NonNull T> extends AtomicLong implements Subscription, NonThrowingPredicate<Object> {
