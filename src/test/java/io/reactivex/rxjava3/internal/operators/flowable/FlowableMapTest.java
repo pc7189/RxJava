@@ -52,10 +52,7 @@ public class FlowableMapTest extends RxJavaTest {
     public void before() {
         stringSubscriber = TestHelper.mockSubscriber();
 
-//        TODO : w2 should be remmoved as it isn't being used anywhere
-//        FIXME : delete the  piece of code
 
-        stringSubscriber2 = TestHelper.mockSubscriber();
     }
 
     @Test
