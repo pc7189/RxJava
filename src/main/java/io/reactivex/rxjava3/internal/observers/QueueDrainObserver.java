@@ -105,6 +105,10 @@ public abstract class QueueDrainObserver<T, U, V> extends QueueDrainSubscriberPa
 
     @Override
     public final Throwable error() {
+
+        //    TODO : remove the overridden method as it returns the default value anyway
+        //    FIXME : Remove the piece of code
+
         return error;
     }
 
