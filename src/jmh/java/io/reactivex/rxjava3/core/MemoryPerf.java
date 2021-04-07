@@ -38,13 +38,6 @@ public final class MemoryPerf {
         org.reactivestreams.Subscription upstream;
 
         @Override
-        public void onSubscribe(Subscription s) {
-//            TODO : remove the variable this.upstream as it is not used later in the project
-//            FIXME : remove the variable as it is unread
-            this.upstream = s;
-        }
-
-        @Override
         public void onComplete() {
 
         }
