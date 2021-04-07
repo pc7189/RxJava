@@ -99,6 +99,10 @@ public class FlowableZipTests extends RxJavaTest {
         Flowable<Object> result = Flowable.zip(observables, new Function<Object[], Object>() {
             @Override
             public Object apply(Object[] args) {
+
+//                TODO : replace the array in the System.out.println with something that doesn't give out address values
+//                FIXME : Replace the array in the System.out.println with Arrays.toString(args)
+
                 System.out.println("received: " + args);
                 assertEquals("No argument should have been passed", 0, args.length);
                 return invoked;
