@@ -27,8 +27,6 @@ public class IoScheduledReleaseTest extends RxJavaTest {
     @Test
     public void scheduledRelease() {
 
-        //    TODO : Change the static field to dynamic
-        //    FIXME : Remove the keyword 'static'
 
         boolean savedScheduledRelease = IoScheduler.USE_SCHEDULED_RELEASE;
         IoScheduler.USE_SCHEDULED_RELEASE = true;

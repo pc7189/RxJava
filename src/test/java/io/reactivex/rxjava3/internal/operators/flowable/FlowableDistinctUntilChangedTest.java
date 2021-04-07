@@ -54,6 +54,10 @@ public class FlowableDistinctUntilChangedTest extends RxJavaTest {
     @Before
     public void before() {
         w = TestHelper.mockSubscriber();
+
+//        TODO : w2 should be remmoved as it isn't being used anywhere
+//        FIXME : delete the  piece of code
+
         w2 = TestHelper.mockSubscriber();
     }
 

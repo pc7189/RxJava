@@ -24,9 +24,6 @@ import java.util.concurrent.TimeUnit;
 
 public class SchedulerTest {
 
-    //    TODO : Change the static field to dynamic
-    //    FIXME : Remove the keyword 'static'
-
     private static final String DRIFT_USE_NANOTIME = "rx3.scheduler.use-nanotime";
 
     @After
