@@ -400,6 +400,7 @@ public final class BehaviorSubject<T> extends Subject<T> {
 
     void setCurrent(Object o) {
         writeLock.lock();
+
         index++;
         value.lazySet(o);
         writeLock.unlock();
