@@ -670,6 +670,10 @@ public final class ReplaySubject<T> extends Subject<T> {
         public void addFinal(Object notificationLite) {
             buffer.add(notificationLite);
             trimHead();
+
+            //    TODO : change the way the addition is done to the variable
+            //    FIXME : change the size++ to size = size + 1
+
             size++;
             done = true;
         }
