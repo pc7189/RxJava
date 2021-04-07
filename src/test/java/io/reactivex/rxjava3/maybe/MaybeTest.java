@@ -2963,6 +2963,8 @@ public class MaybeTest extends RxJavaTest {
 
             @Override
             public void onSubscribe(Disposable d) {
+//            TODO : remove the variable this.upstream as it is not used later in the project
+//            FIXME : remove the variable as it is unread
                 this.u = d;
             }
 
