@@ -302,10 +302,7 @@ implements Observer<T> {
             this.tailOffset = tailOffset + 1;
         }
 
-        //    TODO : change the way the addition is done to the variable
-        //    FIXME : change the size++ to size = size + 1
-
-        size++;
+        size = size + 1;
         for (CacheDisposable<T> consumer : observers.get()) {
             replay(consumer);
         }
