@@ -39,6 +39,8 @@ public final class MemoryPerf {
 
         @Override
         public void onSubscribe(Subscription s) {
+//            TODO : remove the variable this.upstream as it is not used later in the project
+//            FIXME : remove the variable as it is unread
             this.upstream = s;
         }
 
