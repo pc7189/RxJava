@@ -126,10 +126,7 @@ public class ExecutorSchedulerTest extends AbstractSchedulerConcurrencyTests {
             t -= sleepStep;
             finish = memoryMXBean.getHeapMemoryUsage().getUsed();
         }
-//        TODO : Change the divisor from double to float value
-//        FIXME : Change the divisor of the last variable from 1024d to 1024.0
-
-        fail(String.format("Tasks retained: %.3f -> %.3f -> %.3f", initial / 1024 / 1024.0, after / 1024 / 1024.0, finish / 1024 / 1024d));
+        fail(String.format("Tasks retained: %.3f -> %.3f -> %.3f", initial / 1024 / 1024.0, after / 1024 / 1024.0, finish / 1024 / 1024.0));
     }
 
     @Test
